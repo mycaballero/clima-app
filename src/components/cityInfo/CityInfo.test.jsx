@@ -12,6 +12,8 @@ const country = "Colombia"
     const { findAllByRole } = render(<CityInfo city={city} country={country}></CityInfo>)
 // Assert -> revisar que el test funcionó
     // buscar todos los componentes que sean cabecera (h1,h2,..)
+    
+    // eslint-disable-next-line testing-library/prefer-screen-queries
     const cityAndCountryComponent = await findAllByRole("heading")//aunque muestra error funciona bien
     // ¿Cuando es correcto el test?
     // Definicion
