@@ -6,11 +6,11 @@ import CityList from './CityList'
 test("CityList render", async() => {
     //Arrange
     const cities = [
-        {city:"paa",country:"sasas"},
-        {city:"pae",country:"sasas"},
-        {city:"pai",country:"sasas"},
-        {city:"pao",country:"sasas"},
-        {city:"pau",country:"sasas"},
+        {city:"Cartagena",country:"Colombia"},
+        {city:"Bogotá",country:"Colombia"},
+        {city:"Buenos Aires",country:"Argentina"},
+        {city:"Ciudad de México",country:"Mexico"},
+        {city:"Sao Paulo",country:"Brasil"},
     ] 
     
     // Act
