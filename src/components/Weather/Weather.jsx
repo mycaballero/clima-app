@@ -4,6 +4,9 @@ import { Typography } from '@material-ui/core'
 import { WiCloud, WiDaySunny, WiRain, WiMoonFull, WiThunderstorm } from 'react-icons/wi'
 import { IconContext } from 'react-icons'
 
+
+const validValuesOfState = ["cloud","sunny","rain","moon","storm"] // valores para verificar
+
 const stateByName = {
     cloud: WiCloud,
     sunny: WiDaySunny,
@@ -58,7 +61,7 @@ const Weather = ({ temperature, state }) => {
 
 Weather.propTypes = {
     temperature: PropTypes.string.isRequired,
-    state: PropTypes.string.isRequired
+    state: PropTypes.oneOf(validValuesOfState).isRequired
 }
 
 export default Weather
