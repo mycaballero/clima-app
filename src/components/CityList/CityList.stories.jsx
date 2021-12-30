@@ -1,6 +1,7 @@
 import React from 'react'
 import 'typeface-roboto'
 import CityList from './CityList'
+import { action } from '@storybook/addon-actions'
 
 export default {
     title: "CityList",
@@ -14,6 +15,6 @@ const cityAndCountry = [
     {city:"Sao Paulo",country:"Brasil"},
 ]
 
-const cityListExample = () => (<CityList cities={cityAndCountry} ></CityList>)
+const cityListExample = () => (<CityList cities={cityAndCountry} onClickCity={action("Click en cltiy")}></CityList>)
 
 export const ListEx = cityListExample
