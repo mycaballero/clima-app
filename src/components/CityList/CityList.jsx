@@ -4,11 +4,13 @@ import  { Grid }  from '@material-ui/core/' // sistema de grillas funciona como 
 import CityInfo from './../cityInfo'
 import Weather from './../Weather'
 
-const renderCityAndCountry = cityAndCountry => {
+
+// renderCityAndCountry se va a convertir en una función que retorna otra función
+const renderCityAndCountry = eventonClickCity => cityAndCountry => {
     const {city, country } = cityAndCountry
 
     return (
-        <li key={city.toString()}>
+        <li key={city.toString()} onClick={eventonClickCity}>
             <Grid container
                 justify='center'
                 alignItems='center'
@@ -32,11 +34,11 @@ const renderCityAndCountry = cityAndCountry => {
     )
 }
 // cities es un aray, cada item va a tener ciudad y pais
-const CityList = ({cities}) => {
+const CityList = ({cities, onClickCity}) => {
     return (
         <ul>
             {
-                cities.map(cityAndCountry => renderCityAndCountry(cityAndCountry))
+                cities.map(cityAndCountry => renderCityAndCountry(onClickCity)(cityAndCountry))
             }
 
         </ul>
@@ -44,7 +46,8 @@ const CityList = ({cities}) => {
 }
 
 CityList.propTypes = {
-    cities: PropTypes.array.isRequired
+    cities: PropTypes.array.isRequired,
+    onClickCity: PropTypes.func.isRequired
 }
 
 export default CityList
