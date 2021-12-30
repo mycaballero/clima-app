@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import  { Grid }  from '@material-ui/core/' // sistema de grillas funciona como el de Bootstrap
-import CityInfo from './../cityInfo'
+import CityInfo from '../CityInfo'
 import Weather from './../Weather'
 
 
