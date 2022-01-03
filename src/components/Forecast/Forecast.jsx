@@ -39,7 +39,7 @@ Forecast.propTypes = {
         hour: PropTypes.number.isRequired,
         state: PropTypes.arrayOf(validValuesOfState).isRequired,
         temperature: PropTypes.number.isRequired
-    }))
+    })).isRequired
 }
 
 export default Forecast

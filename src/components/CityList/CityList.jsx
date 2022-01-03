@@ -12,7 +12,7 @@ const renderCityAndCountry = eventonClickCity => cityAndCountry => {
     return (
         <li key={city.toString()} onClick={eventonClickCity}>
             <Grid container
-                justify='center'
+                justifyContent='center'
                 alignItems='center'
             >
                 <Grid item
@@ -44,9 +44,12 @@ const CityList = ({cities, onClickCity}) => {
         </ul>
     )
 }
-
+// mejorar estavalidación
 CityList.propTypes = {
-    cities: PropTypes.array.isRequired,
+    cities: PropTypes.arrayOf(PropTypes.shape({
+        city: PropTypes.string.isRequired,
+        country: PropTypes.string.isRequired
+    })),
     onClickCity: PropTypes.func.isRequired
 }
 
