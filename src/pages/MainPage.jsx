@@ -1,7 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
-const MainPage = props => {
+const MainPage = () => {
     return (
         <div>
             MainPage
@@ -9,8 +8,5 @@ const MainPage = props => {
     )
 }
 
-MainPage.propTypes = {
-
-}
 
 export default MainPage
