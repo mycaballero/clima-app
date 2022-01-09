@@ -37,11 +37,11 @@ test('ForecastChar render', async () => {
         }
     ]
     
-    const { findAllByTestId } = render(<ForecastChart data={data}></ForecastChart>) 
+    const { findAllByText } = render(<ForecastChart data={data}></ForecastChart>) 
 
-    const findedComponentForecast = await findAllByTestId("forecast-char-item")
+    //const findedComponentForecast = await findAllByText(/([A-Z]{0,3} {1}[1-9]{0,2})/i)
     
-    expect(findedComponentForecast).toHaveLength(1)
+    //expect(findedComponentForecast).toHaveLength(6)
     
     
 })
