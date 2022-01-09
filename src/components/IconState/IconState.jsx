@@ -9,7 +9,7 @@ const stateByName = {
     sunny: WiDaySunny,
     rain: WiRain,
     moon: WiMoonFull,
-    strom: WiThunderstorm
+    storm: WiThunderstorm
 }
 
 const IconState = ({state}) => {

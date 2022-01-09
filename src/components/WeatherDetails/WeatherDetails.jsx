@@ -1,13 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Typography } from '@material-ui/core'
+import { Grid,Typography } from '@material-ui/core'
 
 const WeatherDetails = ({humidity,wind}) => {
     return (
-        <>
-            <Typography>Humedad: {humidity}%</Typography>
-            <Typography>Viento: {wind}km/h</Typography>
-        </>
+        <Grid container>
+            <Grid item xs={12} align='center'>
+                <Typography>Humedad: {humidity}%</Typography>
+            </Grid>
+            <Grid item xs={12} align='center'>
+                <Typography>Viento: {wind}km/h</Typography>
+            </Grid>
+        </Grid>
     )
 }
 
