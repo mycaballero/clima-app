@@ -16,7 +16,7 @@ const country = "Colombia"
     // ¿Cuando es correcto el test?
     // Definicion
     /*
-        Cuando el primere elemento (Heading) se encyuentre en "Cartagena" y cunado el segundo se encuente en "Colombia"
+        Cuando el primere elemento (Heading) se encuentre en "Cartagena" y cunado el segundo se encuente en "Colombia"
     */
     expect(cityAndCountryComponent[0]).toHaveTextContent(city)
     expect(cityAndCountryComponent[1]).toHaveTextContent(country)

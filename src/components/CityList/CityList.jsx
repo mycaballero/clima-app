@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import  { Grid }  from '@material-ui/core/' // sistema de grillas funciona como el de Bootstrap
-import CityInfo from '../CityInfo'
+import CityInfo from './../cityInfo'
 import Weather from './../Weather'
 
 
@@ -50,7 +50,7 @@ CityList.propTypes = {
         city: PropTypes.string.isRequired,
         country: PropTypes.string.isRequired
     })),
-    onClickCity: PropTypes.func.isRequired
+    onClickCity: PropTypes.func
 }
 
 export default CityList
