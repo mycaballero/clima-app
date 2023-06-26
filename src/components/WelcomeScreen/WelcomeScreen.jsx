@@ -30,8 +30,8 @@ const WelcomeScreen = ({ children }) => {
     }, [vanta]) // se agrega el estado vanta al array e dependenias para mejorar la eficiencia
 
     return (
-        <div>
-            <div ref={myRefDiv} >WelcomeScreen</div>
+        <div className="fixed | w-full h-screen" ref={myRefDiv} >
+            {children}
         </div>
     )
 }
