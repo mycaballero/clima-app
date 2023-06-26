@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import WelcomeScreen from '../components/WelcomeScreen'
 
 const WelcomePage = () => {
     return (
         <div>
-            WelcomePage
-            <Link to="/main"> Ir a Main </Link>
+            <WelcomeScreen></WelcomeScreen>
         </div>
     )
 }
