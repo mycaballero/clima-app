@@ -6,11 +6,11 @@ import CityList from './../components/CityList'
 import { Grid, Typography } from '@material-ui/core'
 
 const cityAndCountry = [
-    {city:"Cartagena",country:"Colombia"},
-    {city:"Bogotá",country:"Colombia"},
-    {city:"Buenos Aires",country:"Argentina"},
-    {city:"Ciudad de México",country:"Mexico"},
-    {city:"Sao Paulo",country:"Brasil"},
+    {city:"Cartagena",country:"Colombia", lng: -74.7813, lat: 10.9685},
+    {city:"Bogotá",country:"Colombia", lng: 4.60971, lat: -74.08175},
+    {city:"Buenos Aires",country:"Argentina", lng: -34.61315, lat: -58.37723},
+    {city:"Ciudad de México",country:"Mexico", lng: 19.42847, lat: -99.12766},
+    {city:"Sao Paulo",country:"Brasil", lng: -23.5475, lat: -46.63611},
 ]
 
 const MainPage = () => {
