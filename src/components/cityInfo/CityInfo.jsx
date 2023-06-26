@@ -5,10 +5,10 @@ import Typography  from '@material-ui/core/Typography'
 
 const CityInfo = ({city, country}) => {
     return (
-        <>
+        <div>
             <Typography display="inline" variant="h4">{city}, </Typography>
             <Typography display="inline" variant="h6">{country}</Typography>
-        </>
+        </div>
     )
 }
 
