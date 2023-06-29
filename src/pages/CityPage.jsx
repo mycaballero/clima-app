@@ -9,7 +9,7 @@ const CityPage = () => {
     const city = "Cartagena"
     const country = "Colombia"
     const temperature = "20"
-    const state = "sunny"
+    const state = "clear"
     const humidity = 80
     const wind = 10
     const data = [
@@ -45,12 +45,12 @@ const CityPage = () => {
         }
     ]
     const ForecastExamples = [
-        {weekDay: "Lunes", hour: 6, state: "sunny", temperature: 10},
-        {weekDay: "Martes", hour: 7, state: "rain", temperature: 12},
-        {weekDay: "Miércoles", hour: 8, state: "moon", temperature: 15},
-        {weekDay: "Jueves", hour: 4, state: "storm", temperature: 11},
-        {weekDay: "Viernes", hour: 12, state: "rain", temperature: 22},
-        {weekDay: "Sábado", hour: 3, state: "cloud", temperature: 13},
+        {weekDay: "Lunes", hour: 6, state: "clear", temperature: 10},
+        {weekDay: "Martes", hour: 7, state: "drizzle", temperature: 12},
+        {weekDay: "Miércoles", hour: 8, state: "clouds", temperature: 15},
+        {weekDay: "Jueves", hour: 4, state: "thunderstorm", temperature: 11},
+        {weekDay: "Viernes", hour: 12, state: "drizzle", temperature: 22},
+        {weekDay: "Sábado", hour: 3, state: "clouds", temperature: 13},
     ] 
     return (
         <Grid container

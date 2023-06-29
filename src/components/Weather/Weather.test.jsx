@@ -3,8 +3,8 @@ import { render } from '@testing-library/react'
 import Weather from './Weather' // SUT: subject under testing (objeto del testeo)
 
 test( "Weather render", async () =>{
-    const temperature = "10"
-    const state = "sunny"
+    const temperature = 10
+    const state = "clear"
 
     const { findByRole } = render(<Weather temperature={temperature} state={state}></Weather>)
 

@@ -11,7 +11,7 @@ test('ForeCastItem render', async () => {
         hour: 10
     }
     // testear los strings
-    const { findByText } = render(<ForecastItem weekDay={camps.weekDay} state={'sunny'} temperature={camps.temperature} hour={camps.hour}></ForecastItem>)
+    const { findByText } = render(<ForecastItem weekDay={camps.weekDay} state={'clear'} temperature={camps.temperature} hour={camps.hour}></ForecastItem>)
         
     const ForecastComponentDay = await findByText("lunes")
     const ForecastComponentTemp = await findByText(10)

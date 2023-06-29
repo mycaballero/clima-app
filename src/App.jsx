@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { Grid } from '@material-ui/core'
 import CityPage from './pages/CityPage'
 import MainPage from './pages/MainPage'
 import NotFoundPage from './pages/NotFoundPage'

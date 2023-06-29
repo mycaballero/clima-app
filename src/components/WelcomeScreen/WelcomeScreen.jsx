@@ -6,9 +6,7 @@ import * as THREE from 'three'
 const WelcomeScreen = ({ children }) => {
     const myRefDiv = useRef(null) // se le pasa null proque inicialemnte retorna null
     const [vanta, setVanta] = useState(0) // vanta va a ser inicializado en "0"
-    console.log("my ref div",myRefDiv.current)// el valor inicial es nulo
     useEffect(() => {
-        console.log("my ref div useEfect",myRefDiv.current)
         if (!vanta) {
             // Activo el efecto "clouds"
             setVanta(
@@ -16,7 +14,6 @@ const WelcomeScreen = ({ children }) => {
                     THREE,
                     el:myRefDiv.current
             })) // vata está inicializado vanta = 1
-            console.log("valor de vanta diferente a 0")
         }
         // Al salir de la pantalla no sigua funcionandoñ
         // desasociar todos los recursos (div + vanta effect)
@@ -24,7 +21,6 @@ const WelcomeScreen = ({ children }) => {
             // realizar la limpieza y procesos necesarios
             if (vanta) {
                 vanta.destroy()
-                console.log("recursos liberados")
             }
         }
     }, [vanta]) // se agrega el estado vanta al array e dependenias para mejorar la eficiencia

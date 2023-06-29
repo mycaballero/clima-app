@@ -8,7 +8,7 @@ export default {
 
 const weekDay = "Lunes"
 const hour = 8
-const state = "sunny"
+const state = "clear"
 const temperature = 10
 
 

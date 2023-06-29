@@ -7,9 +7,9 @@ export default {
 }
 
 const ForecastExamples = [
-    {weekDay: "Lunes", hour: 6, state: "sunny", temperature: 10},
-    {weekDay: "Martes", hour: 7, state: "rain", temperature: 12},
-    {weekDay: "Miercoles", hour: 8, state: "moon", temperature: 15},
+    {weekDay: "Lunes", hour: 6, state: "clear", temperature: 10},
+    {weekDay: "Martes", hour: 7, state: "drizzle", temperature: 12},
+    {weekDay: "Miercoles", hour: 8, state: "clouds", temperature: 15},
 ] 
 
 const ForecastComponent = () => (<Forecast forecastItemList={ForecastExamples} ></Forecast>)
