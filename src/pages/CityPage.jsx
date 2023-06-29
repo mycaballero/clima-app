@@ -8,7 +8,7 @@ import WeatherDetails from '../components/WeatherDetails'
 const CityPage = () => {
     const city = "Cartagena"
     const country = "Colombia"
-    const temperature = "20"
+    const temperature = 20
     const state = "clear"
     const humidity = 80
     const wind = 10
