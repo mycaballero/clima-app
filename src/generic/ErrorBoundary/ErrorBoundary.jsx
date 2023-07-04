@@ -5,42 +5,26 @@ class ErrorBoundary extends Component {
     constructor(props) { // Constructor es para definir un estado base
         super(props) // Super viene del componente extendido
         this.state = { 
-            isActivated: false, 
+            hasError: false
         }
     }
 
-    isActivated = () => this.state.isActivated ? "Está activado" : "No está activado"
-
-    onClickHandler = () => {
-        this.setState({ isActivated: true })
+    static getDerivedStateFromError(error) {
+        // esto es igual que this.state.hasError = true PEROOO...
+        // una función estatica no tiene acceso a los datos de la instacia
+        return { hasError: true }
     }
 
-    // Eventos del ciclo de vida
-    componentDidMount() { 
-        console.log("component ha sido montado!") // Esto se ejecuta en la primera renderización
-    }
-
-    componentDidUpdate(prevProps, prevState) {
-        console.log("estado previo: ", prevState.isActivated) // muestra estado previo
-        console.log("estado acutal: ", this.state.isActivated) // Muestra estado actual
-        console.log("Componente ha sido acutalizado") // mensaje de acutalizado
-    }
-
-    componentWillUnmount() {
-        console.log("coponente desmontado.")
+    componentDidCatch(error, errorInfo) {
+        // Con esto podemos motrar o enviar la información del error
+        console.log(error, errorInfo)
     }
 
     render() {
         return (
-            <div>
-                <button onClick={this.onClickHandler}>
-                    Activado
-                </button>
-                <h1>
-                    Algo falló. {this.props.saludo}
-                    {this.isActivated()}
-                </h1>
-            </div>
+            this.state.hasError
+            ? (<h1>Hay un error</h1>)
+            : (this.props.children)
         )
     }
 }
